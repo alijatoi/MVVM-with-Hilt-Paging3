@@ -4,7 +4,7 @@
 
 
 ### Libraries Used   
-Hilt (Dagger) for Dependency Injection,
+Hilt (Dagger) for Dependency Injection
 
 Paging3 for caching, loading from server
 
