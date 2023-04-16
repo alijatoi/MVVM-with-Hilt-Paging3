@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Paging3Library"
         tools:targetApi="31">
         <activity
-            android:name=".models.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

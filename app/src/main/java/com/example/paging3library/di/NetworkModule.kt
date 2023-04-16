@@ -1,6 +1,7 @@
-package com.example.paging3library.retrofit
+package com.example.paging3library.di
 
-import com.example.paging3library.Constants.BASE_URL
+import com.example.paging3library.retrofit.QuoteAPI
+import com.example.paging3library.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

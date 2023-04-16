@@ -1,4 +1,4 @@
-package com.example.paging3library
+package com.example.paging3library.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

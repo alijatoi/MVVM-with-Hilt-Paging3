@@ -1,4 +1,4 @@
-package com.example.paging3library.models.ui
+package com.example.paging3library.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.paging3library.QuotePagingAdapter
-import com.example.paging3library.QuoteViewModel
+import com.example.paging3library.paging.QuotePagingAdapter
 import com.example.paging3library.R
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
-        recyclerView.adapter = adapter
+        recyclerView.adapter = adapter.withLoadStateHeaderAndFooter(
+            header = LoadMore(),
+            footer = LoadMore()
+        )
 
         quoteViewModel.list.observe(this, Observer {
             adapter.submitData(lifecycle, it)

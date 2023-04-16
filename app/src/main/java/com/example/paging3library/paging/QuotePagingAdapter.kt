@@ -1,4 +1,4 @@
-package com.example.paging3library
+package com.example.paging3library.paging
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,22 @@ import android.widget.TextView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.paging3library.R
+import com.example.paging3library.Results
 
 class QuotePagingAdapter : PagingDataAdapter<Results, QuotePagingAdapter.QuoteViewHolder>(COMPARATOR) {
+
+    companion object {
+        private val COMPARATOR = object : DiffUtil.ItemCallback<Results>() {
+            override fun areItemsTheSame(oldItem: Results, newItem: Results): Boolean {
+                return oldItem.id == newItem.id
+            }
+
+            override fun areContentsTheSame(oldItem: Results, newItem: Results): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
 
         class QuoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val quote = itemView.findViewById<TextView>(R.id.quote)
@@ -27,16 +41,6 @@ class QuotePagingAdapter : PagingDataAdapter<Results, QuotePagingAdapter.QuoteVi
             return QuoteViewHolder(view)
         }
 
-        companion object {
-            private val COMPARATOR = object : DiffUtil.ItemCallback<Results>() {
-                override fun areItemsTheSame(oldItem: Results, newItem: Results): Boolean {
-                    return oldItem.id == newItem.id
-                }
 
-                override fun areContentsTheSame(oldItem: Results, newItem: Results): Boolean {
-                    return oldItem == newItem
-                }
-            }
-        }
 
 }
