@@ -11,8 +11,4 @@ Paging3 for caching, loading from server
 Retrorift for communication with server  
   
 
-<br/>  
-
-
-## Rapidfire  
-<table><tr><td valign="top" width="50%">
+<br/> 
