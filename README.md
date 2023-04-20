@@ -8,8 +8,8 @@
 -> Paging3 for caching, loading from server
 
 -> Retrorift for communicating with server  
-
-Feel free to contribute.
   
 
 <br/> 
+
+Feel free to contribute.
