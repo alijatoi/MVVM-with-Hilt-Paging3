@@ -9,7 +9,7 @@
 
 -> Retrorift for communicating with server  
   
-To Do : Room and Data Store Implementation
+To do : Room and Data Store Implementation
 <br/> 
 
 Feel free to contribute.
