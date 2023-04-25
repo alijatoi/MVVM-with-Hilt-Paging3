@@ -1,5 +1,5 @@
 ## Android app based on MVVM architecture   
-  MVVM : Model-View-ViewModel
+  MVVM : Model-View-ViewModel Architecture
 
 
 ### Libraries Used   
